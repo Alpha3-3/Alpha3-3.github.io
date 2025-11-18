@@ -25,38 +25,60 @@
       --shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
     *{box-sizing:border-box}
-    body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      background:var(--bg);color:var(--text);margin:0;line-height:1.6}
+    body{
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:var(--bg);color:var(--text);margin:0;line-height:1.6
+    }
     .wrap{max-width:980px;margin:0 auto;padding:20px}
     @media(min-width:768px){.wrap{padding:32px}}
-    .nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(180%) blur(10px);
-      background:color-mix(in srgb,var(--bg) 85%,transparent);border-bottom:1px solid var(--border)}
-    .nav-inner{max-width:980px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+    .nav{
+      position:sticky;top:0;z-index:10;backdrop-filter:saturate(180%) blur(10px);
+      background:color-mix(in srgb,var(--bg) 85%,transparent);border-bottom:1px solid var(--border)
+    }
+    .nav-inner{
+      max-width:980px;margin:0 auto;padding:10px 20px;
+      display:flex;align-items:center;justify-content:space-between
+    }
     .brand{font-weight:700}
     .nav-links{display:flex;gap:18px;align-items:center}
     .nav-links a{text-decoration:none;color:var(--text);opacity:.85}
     .nav-links a:hover{opacity:1;color:var(--link)}
-    .toggle{border:1px solid var(--border);background:var(--card);padding:6px 10px;border-radius:999px;
-      display:inline-flex;gap:8px;align-items:center;cursor:pointer;box-shadow:var(--shadow);color:var(--text)}
+    .toggle{
+      border:1px solid var(--border);background:var(--card);padding:6px 10px;border-radius:999px;
+      display:inline-flex;gap:8px;align-items:center;cursor:pointer;box-shadow:var(--shadow);color:var(--text)
+    }
     .toggle svg{width:18px;height:18px}
-    .hero{display:grid;gap:24px;align-items:center;grid-template-columns:120px 1fr;
+    .hero{
+      display:grid;gap:24px;align-items:center;grid-template-columns:120px 1fr;
       margin-top:28px;background:var(--card);border:1px solid var(--border);
-      border-radius:16px;padding:20px;box-shadow:var(--shadow)}
-    .avatar{width:120px;height:120px;border-radius:14px;object-fit:cover;border:1px solid var(--border)}
+      border-radius:16px;padding:20px;box-shadow:var(--shadow)
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:14px;object-fit:cover;border:1px solid var(--border)
+    }
     .hero h1{margin:0 0 4px;font-size:1.9rem}
     .hero .sub{color:var(--muted);margin:0 0 12px}
     .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-    .btn{text-decoration:none;color:var(--bg);background:var(--link);padding:10px 14px;
-      border-radius:10px;font-weight:600;display:inline-flex;gap:8px;align-items:center;box-shadow:var(--shadow)}
+    .btn{
+      text-decoration:none;color:var(--bg);background:var(--link);padding:10px 14px;
+      border-radius:10px;font-weight:600;display:inline-flex;gap:8px;align-items:center;box-shadow:var(--shadow)
+    }
     .btn.secondary{color:var(--text);background:var(--card);border:1px solid var(--border)}
     section{margin-top:36px}
-    h2{font-size:1.4rem;margin:0 0 14px;border-bottom:1px dashed var(--border);padding-bottom:6px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+    h2{
+      font-size:1.4rem;margin:0 0 14px;border-bottom:1px dashed var(--border);padding-bottom:6px
+    }
+    .card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:14px;padding:18px;box-shadow:var(--shadow)
+    }
     .list{display:grid;gap:14px}
     .item-title{margin:0;font-weight:650}
     .item-meta{margin:2px 0 0;color:var(--muted);font-size:.95rem}
     a{color:var(--link)}
-    footer{margin:40px 0 20px;color:var(--muted);text-align:center;font-size:.95rem}
+    footer{
+      margin:40px 0 20px;color:var(--muted);text-align:center;font-size:.95rem
+    }
   </style>
 </head>
 <body>
@@ -67,12 +89,16 @@
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#pubs">Publications</a>
+        <a href="#awards">Awards</a>
         <a href="#research">Research</a>
         <a href="#industry">Industrial Positions</a>
         <a href="#etc">Etc.</a>
         <button id="theme-toggle" class="toggle" aria-pressed="false" title="Toggle theme">
           <span id="toggle-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2m0 16v2m10-10h-2M4 12H2"/>
+            </svg>
           </span>
           <span id="toggle-text">Light</span>
         </button>
@@ -85,9 +111,11 @@
       <img class="avatar" src="assets/me.jpg" alt="Photo of Jiuzhou Fu" />
       <div>
         <h1>Jiuzhou Fu</h1>
-        <p class="sub">Department of Mathematics, University of Washington</p>
-        <p><strong>Email:</strong> <a href="mailto:jiuzhou@uw.edu">jiuzhou@uw.edu</a><br>
-           <strong>GitHub:</strong> <a href="https://github.com/Alpha3-3" target="_blank" rel="noopener">github.com/Alpha3-3</a></p>
+        <p class="sub">B.S. in Mathematics, University of Washington</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:jiuzhou@uw.edu">jiuzhou@uw.edu</a><br>
+          <strong>GitHub:</strong> <a href="https://github.com/Alpha3-3" target="_blank" rel="noopener">github.com/Alpha3-3</a>
+        </p>
         <div class="btn-row">
           <a class="btn" href="assets/Jiuzhou_Fu_Academic_Resume.pdf" download>Download CV</a>
           <a class="btn secondary" href="https://alpha3-3.github.io" target="_blank" rel="noopener">Homepage</a>
@@ -99,9 +127,17 @@
       <h2>About</h2>
       <div class="card">
         <p>
-          I’m an undergraduate researcher in the <a href="https://hpdic.github.io/" target="_blank" rel="noopener">High-Performance Data-Intelligence Computing (HPDIC) Lab</a> at the University of Washington.
-          My interests span applied mathematics, machine learning systems, vector databases, LLMs/NLP, and efficient algorithms for high-dimensional data.
-          Recent projects include <em>ProHD</em> (fast Hausdorff distance approximation supported by PNNL/DOE resources) and <em>MPAD</em> (an unsupervised dimensionality reduction method that preserves nearest-neighbor structure for ANN systems).
+          I’m an undergraduate researcher in the
+          <a href="https://hpdic.github.io/" target="_blank" rel="noopener">High-Performance Data-Intelligence Computing (HPDIC) Lab</a>
+          at the University of Washington. My research interests include applied mathematics, vector databases, information retrieval,
+          large language models (LLMs), natural language processing (NLP), machine learning systems, and efficient algorithms for
+          high-dimensional data.
+        </p>
+        <p>
+          Recent projects include <em>ProHD</em>, a projection-guided subset-selection algorithm for fast Hausdorff distance approximation
+          (10–100× speedups with bounded error, supported by PNNL/DOE resources and large-scale clusters), and
+          <em>QPAD</em>, an unsupervised, quantile-preserving dimension-reduction method that maximizes neighborhood margin to preserve
+          approximate nearest-neighbor structure in high-dimensional vector search systems.
         </p>
       </div>
     </section>
@@ -111,7 +147,11 @@
       <div class="card list">
         <div>
           <p class="item-title">B.S. in Mathematics — University of Washington (2022 – Present), Seattle, WA</p>
-          <p class="item-meta">Two-year Honors Math sequence (Calculus, Differential Equations, Real &amp; Complex Analysis); Abstract Algebra; Topology &amp; Geometry; Probability; DBMS; AI; Machine Learning.</p>
+          <p class="item-meta">
+            Coursework includes: two-year Honors Math sequence (Calculus, Differential Equations, Real &amp; Complex Analysis),
+            Abstract Algebra, Topology &amp; Geometry, Probability, Database Management Systems (DBMS), Artificial Intelligence (AI),
+            and Machine Learning.
+          </p>
         </div>
       </div>
     </section>
@@ -121,18 +161,49 @@
       <div class="card list">
         <div>
           <p class="item-title">ProHD: Projection-Based Hausdorff Distance Approximation</p>
-          <p class="item-meta">Jiuzhou Fu, Luanzheng Guo, Nathan Tallent, Dongfang Zhao · IEEE ICDM 2025 (13% acceptance rate)
-            · <a href="#" aria-label="ProHD paper link to be added">paper (TBA)</a> · <a href="#" aria-label="ProHD code link to be added">code (TBA)</a> · <a href="#" aria-label="ProHD slides link to be added">slides (TBA)</a></p>
+          <p class="item-meta">
+            Jiuzhou Fu, Luanzheng Guo, Nathan Tallent, Dongfang Zhao ·
+            IEEE International Conference on Data Mining (ICDM) 2025 — oral presentation (13% acceptance rate).
+            · <a href="#" aria-label="ProHD paper link to be added">paper (TBA)</a>
+            · <a href="#" aria-label="ProHD code link to be added">code (TBA)</a>
+            · <a href="#" aria-label="ProHD slides link to be added">slides (TBA)</a>
+          </p>
         </div>
         <div>
-          <p class="item-title">MPAD: A New Dimension-Reduction Method for Preserving Nearest Neighbors in High-Dimensional Vector Search</p>
-          <p class="item-meta">Jiuzhou Fu, Dongfang Zhao · Under review at WSDM 2026
-            · <a href="https://arxiv.org/abs/2504.16335" target="_blank" rel="noopener">arXiv</a> · <a href="#" aria-label="MPAD code link to be added">code (TBA)</a> · <a href="#" aria-label="MPAD poster link to be added">poster (TBA)</a></p>
+          <p class="item-title">
+            QPAD: Quantile-Preserving Approximate Dimension Reduction for Nearest Neighbors Preservation
+            in High-Dimensional Vector Search
+          </p>
+          <p class="item-meta">
+            Jiuzhou Fu, Dongfang Zhao · Under review at
+            IEEE International Conference on Data Engineering (ICDE) 2026.
+            · <a href="https://arxiv.org/abs/2504.16335" target="_blank" rel="noopener">arXiv</a>
+            · <a href="#" aria-label="QPAD code link to be added">code (TBA)</a>
+            · <a href="#" aria-label="QPAD poster link to be added">poster (TBA)</a>
+          </p>
         </div>
         <div>
-          <p class="item-title">Directed Hypergraph Processing (preprint)</p>
-          <p class="item-meta">Jiuzhou Fu, Dongfang Zhao, et al.
-            · <a href="#" aria-label="Directed Hypergraph Processing preprint link to be added">preprint (TBA)</a></p>
+          <p class="item-title">
+            SSIDN: A Small-Sample Incremental Diagnosis Network for Railway Turnout Actuators
+          </p>
+          <p class="item-meta">
+            Yuhan Huang, Xiaoxi Hu, <strong>Jiuzhou Fu</strong>, Fei Chen, Jingming Cao, Naibang Wang ·
+            Under review at IEEE Instrumentation and Measurement Technology Conference (i2MTC) 2026
+            (flagship conference of the IEEE Instrumentation and Measurement Society).
+            · <a href="#" aria-label="SSIDN paper link to be added">paper (TBA)</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>Awards</h2>
+      <div class="card list">
+        <div>
+          <p class="item-title">ICDM 2025 Student Travel Award (Funded by NSF)</p>
+          <p class="item-meta">
+            Awarded support to present ProHD at the IEEE International Conference on Data Mining (ICDM) 2025 in Washington, D.C.
+          </p>
         </div>
       </div>
     </section>
@@ -141,19 +212,62 @@
       <h2>Research</h2>
       <div class="card list">
         <div>
-          <p class="item-title">HPDIC Lab, University of Washington (Nov 2024 – Present)</p>
-          <p class="item-meta">Advisor: Prof. Dongfang Zhao · Topics: ProHD (ICDM 2025), MPAD (WSDM review), directed hypergraph compression/reordering for large-scale systems. Resources: PNNL (DOE), Texas A&amp;M ACES (NSF ACCESS), Chameleon.</p>
-          <p class="item-meta"><a href="https://hpdic.github.io/" target="_blank" rel="noopener">lab site</a> · <a href="#" aria-label="ProHD project link to be added">ProHD project (TBA)</a></p>
+          <p class="item-title">
+            Undergraduate Researcher — HPDIC Lab, University of Washington (Nov 2024 – Present)
+          </p>
+          <p class="item-meta">
+            Advisor: Prof. Dongfang Zhao. Projects include:
+            <strong>ProHD</strong> (projection-based Hausdorff distance approximation with 10–100× speedups and bounded error, supported by
+            PNNL/DOE, Texas A&amp;M ACES cluster, and Chameleon testbed);
+            <strong>QPAD</strong> (quantile-preserving, unsupervised dimension reduction that maximizes neighborhood margin to preserve
+            ANN structure, with formal proofs of boundedness, compactness, and indexability);
+            and <strong>Directed Hypergraph Compression and Reordering</strong> (extending state-of-the-art undirected hypergraph
+            reordering/compression algorithms to directed hypergraphs for reduced L1 cache misses, dynamic maintenance, and smaller
+            storage footprints in large-scale graph systems).
+          </p>
+          <p class="item-meta">
+            Techniques &amp; stack: Linux/VM; C/C++ (STL, OpenMP, Makefile); Python (multiprocessing, psutil, pandas, NumPy, SciPy);
+            FAISS (ANN search); matplotlib; mpi4py and PyOpenCL for parallel computation; Conda for environment management.
+          </p>
+          <p class="item-meta">
+            <a href="https://hpdic.github.io/" target="_blank" rel="noopener">lab site</a>
+            · <a href="#" aria-label="ProHD project link to be added">ProHD project (TBA)</a>
+          </p>
         </div>
         <div>
-          <p class="item-title">Paid Research Intern — School of Vehicle and Mobility, Tsinghua University (Mar 2025 – Present)</p>
-          <p class="item-meta">Sensor error injection &amp; fault diagnosis for RSM/industrial robot time series; built abnormality datasets and pipelines (NumPy, pandas, PyTorch); developed FDCSANet concept for robustness under realistic sensor failures.</p>
-          <p class="item-meta"><a href="#" aria-label="FDCSANet project link to be added">FDCSANet project (TBA)</a></p>
+          <p class="item-title">
+            Paid Research Intern — School of Vehicle and Mobility, Tsinghua University (Mar 2025 – Present)
+          </p>
+          <p class="item-meta">
+            Conduct research on sensor error injection and fault diagnosis for time-series data from railway switch machines (RSM)
+            and industrial robots. Construct datasets simulating sensor abnormalities (open circuit, periodic interference, impulse
+            noise, etc.) to evaluate model robustness and support training of the proposed SSIDN network for end-to-end classification
+            under realistic sensor failures.
+          </p>
+          <p class="item-meta">
+            Implement data preprocessing and error-injection pipelines in Python (NumPy, pandas, PyTorch) for vibration and
+            control-signal time series; perform ablation studies and feature visualizations. One more co-authored paper on fault
+            diagnosis with sensor reliability modeling is in preparation.
+          </p>
+          <p class="item-meta">
+            <a href="#" aria-label="SSIDN project link to be added">SSIDN project (TBA)</a>
+          </p>
         </div>
         <div>
-          <p class="item-title">Experimental Mathematics Lab (WXML), University of Washington (Dec 2023 – Dec 2024)</p>
-          <p class="item-meta">Concentration of measure via Curie–Weiss and high-dimensional spheres; Monte Carlo simulations and Mathematica.</p>
-          <p class="item-meta"><a href="https://drive.google.com/file/d/1-6zf5pWxfsnxSThAJGIN5Evcnx6N9Sa4/view?usp=sharing" target="_blank" rel="noopener">poster</a></p>
+          <p class="item-title">
+            Undergraduate Researcher — Washington Experimental Mathematics Lab (WXML), University of Washington (Dec 2023 – Dec 2024)
+          </p>
+          <p class="item-meta">
+            Conducted theoretical and computational research on the concentration of measure phenomenon via the Curie–Weiss model and
+            high-dimensional spheres. Derived analytic asymptotics and probabilistic limits, and validated them through Monte Carlo
+            simulations and symbolic computation in Wolfram Mathematica.
+          </p>
+          <p class="item-meta">
+            Presented a project poster at the UW Undergraduate Research Symposium as part of the Undergraduate Research Program.
+            · <a href="https://drive.google.com/file/d/1-6zf5pWxfsnxSThAJGIN5Evcnx6N9Sa4/view?usp=sharing" target="_blank" rel="noopener">
+              project poster
+            </a>
+          </p>
         </div>
       </div>
     </section>
@@ -162,19 +276,49 @@
       <h2>Industrial Positions</h2>
       <div class="card list">
         <div>
-          <p class="item-title">Prompt Engineer Intern · Z.AI (Jun – Aug 2025), Beijing</p>
-          <p class="item-meta">REDNOTE (Xiaohongshu overseas) translation systems · Dify-based workflows · instruction fine-tuning for multimodal LLMs (GLM-4v/4.5v) on contract understanding (PDF/image → JSON) · RAG pipelines.</p>
-          <p class="item-meta"><a href="#" aria-label="Z.AI internship summary to be added">summary (TBA)</a></p>
+          <p class="item-title">Prompt Engineer Intern, MaaS Department · Z.AI (Jun – Aug 2025), Beijing</p>
+          <p class="item-meta">
+            Worked on the REDNOTE (Xiaohongshu overseas version) AI Translation System team, focusing on multilingual prompt design,
+            retrieval-augmented generation (RAG) pipelines, and translation strategy development across cross-lingual domains.
+          </p>
+          <p class="item-meta">
+            Designed and deployed Dify-based prompt-engineering workflows supporting instruction fine-tuning of multimodal LLMs
+            (GLM-4v/4.5v) for contract understanding from PDF/image inputs and structured JSON output generation.
+            Designed the PRD and MVP for an LLM prompt-sharing website and implemented workflows for prompt-to-HTML rendering,
+            multi-speaker podcast generation, and TTS stress testing for production readiness.
+          </p>
+          <p class="item-meta">
+            <a href="#" aria-label="Z.AI internship summary to be added">summary (TBA)</a>
+          </p>
         </div>
         <div>
           <p class="item-title">Data Science Intern · Real AI (May – Aug 2024), Beijing</p>
-          <p class="item-meta">Large-scale web data processing (Python/pandas/NumPy + SQL); multi-turn prompt-engineering &amp; retrieval pipeline for enterprise policy-advising LLMs with consistency checks.</p>
-          <p class="item-meta"><a href="#" aria-label="Real AI internship summary to be added">summary (TBA)</a></p>
+          <p class="item-meta">
+            Processed large-scale unstructured web data using Python (pandas, NumPy) and SQL, including automated data-cleaning
+            pipelines for schema standardization, null-value imputation, and cross-table validation.
+          </p>
+          <p class="item-meta">
+            Helped design and deploy a multi-turn prompt-engineering and retrieval pipeline for an enterprise policy-advising LLM,
+            integrating natural-language understanding, semantic retrieval, and consistency checks to enhance factual reliability
+            and reduce hallucination.
+          </p>
+          <p class="item-meta">
+            <a href="#" aria-label="Real AI internship summary to be added">summary (TBA)</a>
+          </p>
         </div>
         <div>
-          <p class="item-title">Cybersecurity Intern (Security BU) · QAX (Aug – Oct 2024), Beijing</p>
-          <p class="item-meta">Blue-team exercises; threat detection &amp; forensics; tooling: Burp Suite, sqlmap, AWVS, Kali Linux; authored mitigation reports.</p>
-          <p class="item-meta"><a href="#" aria-label="QAX internship summary to be added">summary (TBA)</a></p>
+          <p class="item-title">Cybersecurity Intern, Security BU · QAX (Qi An Xin Group) (Aug – Oct 2024), Beijing</p>
+          <p class="item-meta">
+            Participated as a blue-team cybersecurity junior specialist in red-blue adversarial exercises, performing real-time threat
+            detection, vulnerability assessment, and network forensics using QAX’s defense platform.
+          </p>
+          <p class="item-meta">
+            Utilized Burp Suite, sqlmap, AWVS, and Kali Linux to identify injection, authentication, and configuration vulnerabilities;
+            authored technical reports and mitigation documentation for incident response.
+          </p>
+          <p class="item-meta">
+            <a href="#" aria-label="QAX internship summary to be added">summary (TBA)</a>
+          </p>
         </div>
       </div>
     </section>
@@ -192,35 +336,35 @@
   </main>
 
   <script>
-    const root=document.documentElement,key='theme';
-    const prefersDark=window.matchMedia('(prefers-color-scheme: dark)');
+    const root = document.documentElement, key = 'theme';
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
     function applyTheme(next){
-      root.setAttribute('data-theme',next==='dark'?'dark':'light');
-      const pressed=next==='dark';
-      document.getElementById('theme-toggle').setAttribute('aria-pressed',pressed);
-      document.getElementById('toggle-icon').innerHTML=pressed?
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>':
+      root.setAttribute('data-theme', next === 'dark' ? 'dark' : 'light');
+      const pressed = next === 'dark';
+      document.getElementById('theme-toggle').setAttribute('aria-pressed', pressed);
+      document.getElementById('toggle-icon').innerHTML = pressed ?
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>' :
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2"/></svg>';
-      document.getElementById('toggle-text').textContent=pressed?'Dark':'Light';
+      document.getElementById('toggle-text').textContent = pressed ? 'Dark' : 'Light';
     }
     function initTheme(){
-      const saved=localStorage.getItem(key);
-      return saved==='dark'||saved==='light'?saved:(prefersDark.matches?'dark':'light');
+      const saved = localStorage.getItem(key);
+      return (saved === 'dark' || saved === 'light') ? saved : (prefersDark.matches ? 'dark' : 'light');
     }
-    let current=initTheme();
+    let current = initTheme();
     applyTheme(current);
-    prefersDark.addEventListener('change',e=>{
-      if(!localStorage.getItem(key)){
-        current=e.matches?'dark':'light';
+    prefersDark.addEventListener('change', e => {
+      if (!localStorage.getItem(key)) {
+        current = e.matches ? 'dark' : 'light';
         applyTheme(current);
       }
     });
-    document.getElementById('theme-toggle').addEventListener('click',()=>{
-      current=current==='dark'?'light':'dark';
-      localStorage.setItem(key,current);
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      current = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem(key, current);
       applyTheme(current);
     });
-    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
