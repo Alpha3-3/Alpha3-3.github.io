@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jiuzhou Fu | Research Homepage</title>
-  <meta name="description" content="Jiuzhou Fu — University of Washington Department of Mathematics." />
+  <meta name="description" content="Jiuzhou Fu — Mathematics undergraduate at the University of Washington, working on vector search, data systems, and machine learning." />
   <style>
     :root {
       --bg: #ffffff;
@@ -25,6 +25,7 @@
       --shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
     *{box-sizing:border-box}
+    html { scroll-behavior: smooth; }
     body{
       font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
       background:var(--bg);color:var(--text);margin:0;line-height:1.6
@@ -37,10 +38,10 @@
     }
     .nav-inner{
       max-width:980px;margin:0 auto;padding:10px 20px;
-      display:flex;align-items:center;justify-content:space-between
+      display:flex;align-items:center;justify-content:space-between;gap:16px
     }
-    .brand{font-weight:700}
-    .nav-links{display:flex;gap:18px;align-items:center}
+    .brand{font-weight:700;white-space:nowrap}
+    .nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
     .nav-links a{text-decoration:none;color:var(--text);opacity:.85}
     .nav-links a:hover{opacity:1;color:var(--link)}
     .toggle{
@@ -52,6 +53,10 @@
       display:grid;gap:24px;align-items:center;grid-template-columns:120px 1fr;
       margin-top:28px;background:var(--card);border:1px solid var(--border);
       border-radius:16px;padding:20px;box-shadow:var(--shadow)
+    }
+    @media(max-width:700px){
+      .hero{grid-template-columns:1fr}
+      .avatar{margin:auto}
     }
     .avatar{
       width:120px;height:120px;border-radius:14px;object-fit:cover;border:1px solid var(--border)
@@ -74,8 +79,9 @@
     }
     .list{display:grid;gap:14px}
     .item-title{margin:0;font-weight:650}
-    .item-meta{margin:2px 0 0;color:var(--muted);font-size:.95rem}
+    .item-meta{margin:4px 0 0;color:var(--muted);font-size:.97rem}
     a{color:var(--link)}
+    .small-gap{margin-top:8px}
     footer{
       margin:40px 0 20px;color:var(--muted);text-align:center;font-size:.95rem
     }
@@ -91,7 +97,7 @@
         <a href="#pubs">Publications</a>
         <a href="#awards">Awards</a>
         <a href="#research">Research</a>
-        <a href="#industry">Industrial Positions</a>
+        <a href="#industry">Internships</a>
         <a href="#recommenders">Recommenders</a>
         <a href="#etc">Etc.</a>
         <button id="theme-toggle" class="toggle" aria-pressed="false" title="Toggle theme">
@@ -112,14 +118,15 @@
       <img class="avatar" src="assets/me.jpg" alt="Photo of Jiuzhou Fu" />
       <div>
         <h1>Jiuzhou Fu</h1>
-        <p class="sub">B.S. in Mathematics (minor in Applied Mathematics), University of Washington</p>
+        <p class="sub">B.S. in Mathematics, minor in Applied Mathematics · University of Washington</p>
         <p>
-          <strong>Email:</strong> <a href="mailto:jiuzhou@uw.edu">jiuzhou@uw.edu</a><br>
+          <strong>Email:</strong> <a href="mailto:zhii200465@gmail.com">zhii200465@gmail.com</a><br>
+          <strong>Homepage:</strong> <a href="https://alpha3-3.github.io" target="_blank" rel="noopener">alpha3-3.github.io</a><br>
           <strong>GitHub:</strong> <a href="https://github.com/Alpha3-3" target="_blank" rel="noopener">github.com/Alpha3-3</a>
         </p>
         <div class="btn-row">
           <a class="btn" href="assets/Jiuzhou_Fu_Academic_Resume.pdf" download>Download CV</a>
-          <a class="btn secondary" href="https://alpha3-3.github.io" target="_blank" rel="noopener">Homepage</a>
+          <a class="btn secondary" href="#pubs">View Publications</a>
         </div>
       </div>
     </section>
@@ -128,17 +135,18 @@
       <h2>About</h2>
       <div class="card">
         <p>
-          I’m an undergraduate researcher in the
+          I am an undergraduate researcher at the
           <a href="https://hpdic.github.io/" target="_blank" rel="noopener">High-Performance Data-Intelligence Computing (HPDIC) Lab</a>
-          at the University of Washington. My research interests include
-          <strong>vector databases</strong>, <strong>information retrieval</strong>, <strong>large language models (LLMs)</strong>,
-          <strong>natural language processing (NLP)</strong>, <strong>machine learning systems</strong>, and <strong>AI</strong>.
+          at the University of Washington. My interests lie in
+          <strong>vector databases</strong>, <strong>approximate nearest neighbor search</strong>,
+          <strong>dimensionality reduction</strong>, <strong>high-performance data systems</strong>,
+          <strong>information retrieval</strong>, and <strong>machine learning systems</strong>.
         </p>
         <p>
-          Recent projects include <em>ProHD</em>, a projection-guided subset-selection algorithm for fast Hausdorff distance approximation
-          (10–100× speedups with bounded error on large high-dimensional datasets, supported by PNNL/DOE resources and large-scale clusters),
-          and <em>QPAD</em>, an unsupervised, quantile-preserving dimension-reduction method that maximizes neighborhood margin to preserve
-          approximate nearest-neighbor structure in high-dimensional vector search systems.
+          My recent work includes <em>ProHD</em>, a projection-based method for fast Hausdorff distance approximation,
+          and <em>QPAD</em>, an unsupervised dimensionality-reduction method designed to preserve nearest-neighbor
+          structure in high-dimensional vector search. I am also working on directed hypergraph compression and
+          reordering for large-scale data and ML systems.
         </p>
       </div>
     </section>
@@ -148,15 +156,18 @@
       <div class="card list">
         <div>
           <p class="item-title">
-            B.S. in Mathematics (minor in Applied Mathematics) — University of Washington (2022 – Present), Seattle, WA
+            B.S. in Mathematics (Minor in Applied Mathematics) — University of Washington, Seattle, WA
           </p>
           <p class="item-meta">
-            Dean's List: 2023, 2024, 2025.
+            2022 – Present
           </p>
           <p class="item-meta">
-            Coursework includes: two-year Honors Math sequence (Vector Calculus, Differential Equations, Real &amp; Complex Analysis),
-            Abstract Algebra, Topology &amp; Geometry, Probability, Database Management Systems (DBMS), Artificial Intelligence (AI),
-            and Machine Learning.
+            Dean’s List: 2023 Spring &amp; Autumn; 2024 Autumn; 2025 Winter, Spring &amp; Autumn; 2024–2025 Annual Dean’s List.
+          </p>
+          <p class="item-meta">
+            Coursework: Two-year Honors Math Sequence (Vector Calculus, Differential Equations, Real &amp; Complex Analysis),
+            Abstract Algebra, Topology &amp; Geometry, Probability, Database Systems, Artificial Intelligence, Machine Learning,
+            and related topics.
           </p>
         </div>
       </div>
@@ -169,39 +180,53 @@
           <p class="item-title">ProHD: Projection-Based Hausdorff Distance Approximation</p>
           <p class="item-meta">
             <strong>Jiuzhou Fu</strong>, Luanzheng Guo, Nathan Tallent, Dongfang Zhao ·
-            IEEE International Conference on Data Mining (ICDM) 2025 — oral presentation (top-tier data mining conference, 13% acceptance rate for full research papers).<br>
-            · <a href="https://arxiv.org/abs/2511.18207" target="_blank" rel="noopener">arXiv</a>
+            <strong>IEEE International Conference on Data Mining (ICDM) 2025</strong> ·
+            Full research paper, full-length oral presentation · Accepted on Aug 25, 2025 · 13% acceptance rate.
+          </p>
+          <p class="item-meta">
+            <a href="https://arxiv.org/abs/2511.18207" target="_blank" rel="noopener">arXiv</a>
           </p>
         </div>
+
         <div>
           <p class="item-title">
             QPAD: Quantile-Preserving Approximate Dimension Reduction for Nearest Neighbors Preservation in High-Dimensional Vector Search
           </p>
           <p class="item-meta">
-            <strong>Jiuzhou Fu</strong>, Dongfang Zhao · Under review at
-            IEEE International Conference on Data Engineering (ICDE) 2026.<br>
-            · <a href="https://arxiv.org/abs/2504.16335" target="_blank" rel="noopener">arXiv</a>
+            <strong>Jiuzhou Fu</strong>, Dongfang Zhao ·
+            <strong>IEEE International Conference on Data Engineering (ICDE) 2026</strong> ·
+            Accepted on Feb 23, 2026.
+          </p>
+          <p class="item-meta">
+            <a href="https://arxiv.org/abs/2504.16335" target="_blank" rel="noopener">arXiv</a>
           </p>
         </div>
+
         <div>
           <p class="item-title">
             SSIDN: A Small-Sample Incremental Diagnosis Network for Railway Turnout Actuators
           </p>
           <p class="item-meta">
             Yuhan Huang, Xiaoxi Hu, <strong>Jiuzhou Fu</strong>, Fei Chen, Jingming Cao, Naibang Wang ·
-            Under review at IEEE Instrumentation and Measurement Technology Conference (i2MTC) 2026
-            (flagship conference of the IEEE Instrumentation and Measurement Society).<br>
-            · <a href="https://drive.google.com/file/d/1ujuEkeiSBO2n9S_mqFbOL4wnK2Lc-cHU/view?usp=sharing" target="_blank" rel="noopener">paper</a>
+            <strong>IEEE Instrumentation and Measurement Technology Conference (i2MTC) 2026</strong> ·
+            Accepted on Feb 25, 2026.
+          </p>
+          <p class="item-meta">
+            <a href="https://drive.google.com/file/d/1ujuEkeiSBO2n9S_mqFbOL4wnK2Lc-cHU/view?usp=sharing" target="_blank" rel="noopener">paper</a>
           </p>
         </div>
+
         <div>
           <p class="item-title">
             Channel-Incremental Convolutional Neural Network for Railway Point Machine Fault Diagnosis with Expanding Sensor Configurations
           </p>
           <p class="item-meta">
             Xu Zhang, Xiaoxi Hu, Yuhan Huang, <strong>Jiuzhou Fu</strong>, Jingming Cao, Tao Tang ·
-            Under review at IEEE Instrumentation and Measurement Technology Conference (i2MTC) 2026.<br>
-            · <a href="https://drive.google.com/file/d/1VXNud8jjUyaoHlB3twAsWl02I0rmK771/view?usp=sharing" target="_blank" rel="noopener">paper</a>
+            <strong>i2MTC 2026</strong> ·
+            Accepted on Feb 25, 2026.
+          </p>
+          <p class="item-meta">
+            <a href="https://drive.google.com/file/d/1VXNud8jjUyaoHlB3twAsWl02I0rmK771/view?usp=sharing" target="_blank" rel="noopener">paper</a>
           </p>
         </div>
       </div>
@@ -211,114 +236,139 @@
       <h2>Awards</h2>
       <div class="card list">
         <div>
-          <p class="item-title">ICDM 2025 Student Travel Award (Funded by NSF)</p>
-          <p class="item-meta">
-            Awarded support to present ProHD at the IEEE International Conference on Data Mining (ICDM) 2025 in Washington, D.C.
-          </p>
+          <p class="item-title">Mary Gates Research Scholarship ($5000)</p>
+          <p class="item-meta">Dec 2025</p>
+        </div>
+        <div>
+          <p class="item-title">ICDM Student Travel Award (Funded by NSF)</p>
+          <p class="item-meta">Oct 2025</p>
         </div>
       </div>
     </section>
 
     <section id="research">
-      <h2>Research</h2>
+      <h2>Research Experience</h2>
       <div class="card list">
         <div>
           <p class="item-title">
-            Undergraduate Researcher — HPDIC Lab, University of Washington (Nov 2024 – Present)
+            Undergraduate Researcher — High-Performance Data-Intelligence Computing (HPDIC) Lab, University of Washington
+          </p>
+          <p class="item-meta">Nov 2024 – Present · Seattle, WA · Advisor: Prof. Dongfang Zhao</p>
+          <p class="item-meta">
+            <strong>ProHD: Projection-Based Hausdorff Distance Approximation (ICDM 2025)</strong> — proposed a projection-based
+            subset-selection approach for fast Hausdorff distance estimation in high dimensions using centroid directions and
+            principal components; achieved <strong>10–100× speedups</strong> with controllable error on multiple datasets;
+            supported by <strong>PNNL</strong> and evaluated on the Texas A&amp;M ACES cluster and Chameleon testbed.
           </p>
           <p class="item-meta">
-            Advisor: Prof. Dongfang Zhao.
+            <strong>QPAD: Quantile-Preserving Approximate Dimension Reduction for Nearest Neighbors Preservation in High-Dimensional Vector Search (ICDE 2026)</strong>
+            — developed an <strong>unsupervised</strong> dimensionality-reduction method for improving neighborhood preservation
+            after DR in ANN systems; proved key mathematical properties and evaluated against common baselines on
+            <strong>six datasets</strong>, showing consistent gains.
           </p>
           <p class="item-meta">
-            <strong>ProHD: Projection-Based Hausdorff Distance Approximation (ICDM 2025)</strong> — proposed a projection-guided subset-selection
-            algorithm that combines centroid intersections and principal components to approximate the Hausdorff distance 10–100× faster, with bounded error;
-            work supported by the U.S. Department of Energy’s Pacific Northwest National Laboratory (PNNL), Texas A&amp;M ACES cluster (NSF ACCESS),
-            and the Chameleon testbed; presented in Washington, D.C.
+            <strong>Directed Hypergraph Compression and Reordering</strong> — studying a 1D array storage format for
+            <strong>directed hypergraphs</strong> to improve compression, cache locality, and runtime in ML and database workloads.
           </p>
           <p class="item-meta">
-            <strong>QPAD: Quantile-Preserving Approximate Dimension Reduction for Nearest Neighbors Preservation in High-Dimensional Vector Search (under ICDE review)</strong> — developed an unsupervised dimensionality-reduction method maximizing neighborhood margin to preserve approximate nearest-neighbor (ANN) structure, with formal proofs of boundedness, compactness, and indexability in ANN systems.
-          </p>
-          <p class="item-meta">
-            <strong>Directed Hypergraph Compression and Reordering (under preparation)</strong> — extended a state-of-the-art undirected hypergraph reordering and compression algorithm to directed hypergraphs, enabling dynamic maintenance, reduced L1 cache misses, task speedups, and a smaller storage footprint for large-scale graph systems.
-          </p>
-          <p class="item-meta">
-            Techniques &amp; stack: Linux/VM; C/C++ (STL, OpenMP, Makefile); Python (multiprocessing, psutil, pandas, NumPy, SciPy);
-            FAISS (ANN search); matplotlib (visualization); mpi4py and PyOpenCL (parallel computation); Conda (environment management).
+            <strong>Techniques &amp; Stack:</strong> Linux/VM; C/C++ (STL, OpenMP, Makefile); Python (multiprocessing, psutil,
+            pandas, NumPy, SciPy); FAISS; matplotlib; mpi4py; PyOpenCL; Conda.
           </p>
           <p class="item-meta">
             <a href="https://hpdic.github.io/" target="_blank" rel="noopener">HPDIC Lab site</a>
           </p>
         </div>
+
         <div>
           <p class="item-title">
-            Paid Research Intern — School of Vehicle and Mobility, Tsinghua University (Mar 2025 – Present)
+            Paid Research Assistant — School of Vehicle and Mobility, Tsinghua University
+          </p>
+          <p class="item-meta">Mar 2025 – Present · Beijing, China</p>
+          <p class="item-meta">
+            <strong>SSIDN / CI-CNN (i2MTC 2026)</strong> — generated high-quality training segments through
+            <strong>fault injection</strong> on real-world time-series data from railway turnout actuators and industrial-robot
+            sensors to improve robustness to sensor failures.
           </p>
           <p class="item-meta">
-            <strong>SSIDN: A Small-Sample Incremental Diagnosis Network for Railway Turnout Actuators (under i2MTC review)</strong> — simulated time-series sensor-abnormality datasets (open-circuit, periodic interference, impulse noise, etc.) for railway switch machines and industrial robots to evaluate fault-diagnosis robustness, enabling end-to-end classification under realistic sensor failures.
+            Simulated sensor-abnormality patterns including <strong>short-circuit</strong>, <strong>open-circuit</strong>,
+            <strong>periodic interference</strong>, <strong>impulse noise</strong>, and <strong>sensor tilt</strong>;
+            supported ablation studies and feature visualization.
           </p>
           <p class="item-meta">
-            <strong>CI-CNN: Channel-Incremental Convolutional Neural Network for Railway Point Machine Fault Diagnosis (under i2MTC review)</strong> — developed a channel-incremental framework that integrates new sensors without retraining via orthogonal initialization and selective freezing; validated on ZDJ9-RPM deployments, achieving 0.945 accuracy with minimal overhead.
-          </p>
-          <p class="item-meta">
-            Implemented data preprocessing and error-injection pipelines in Python (NumPy, pandas, PyTorch) for vibration and control-signal time series; performed ablation studies and feature visualizations. Another co-authored paper on fault diagnosis with sensor reliability modeling is in preparation.
+            Built the end-to-end error-injection and time-series processing pipeline in <strong>Python</strong>
+            (NumPy, pandas, PyTorch).
           </p>
         </div>
+
         <div>
           <p class="item-title">
-            Undergraduate Researcher — Washington Experimental Mathematics Lab (WXML), University of Washington (Dec 2023 – Dec 2024)
+            Undergraduate Researcher — Washington Experimental Mathematics Lab (WXML), University of Washington
+          </p>
+          <p class="item-meta">Dec 2023 – Dec 2024 · Seattle, WA</p>
+          <p class="item-meta">
+            Studied the <strong>concentration of measure</strong> phenomenon in measure theory, probability, and combinatorics;
+            derived analytic asymptotics and probabilistic limits via the <strong>Curie–Weiss model</strong>, and validated
+            results using <strong>Monte Carlo simulation</strong> and symbolic computation in <em>Wolfram Mathematica</em>.
           </p>
           <p class="item-meta">
-            Conducted theoretical and computational research on the concentration of measure phenomenon via the Curie–Weiss model and
-            high-dimensional spheres, deriving analytic asymptotics and probabilistic limits, and validating them through Monte Carlo
-            simulations and symbolic computation in Wolfram Mathematica.
-          </p>
-          <p class="item-meta">
-            Presented a project poster at the UW Undergraduate Research Symposium as part of the Undergraduate Research Program.<br>
-            · <a href="https://drive.google.com/file/d/1-6zf5pWxfsnxSThAJGIN5Evcnx6N9Sa4/view?usp=sharing" target="_blank" rel="noopener">
-              project poster
-            </a>
+            Presented a poster at the <strong>UW Undergraduate Research Symposium</strong>.
+            <a href="https://drive.google.com/file/d/1-6zf5pWxfsnxSThAJGIN5Evcnx6N9Sa4/view?usp=sharing" target="_blank" rel="noopener">Poster link</a>
           </p>
         </div>
       </div>
     </section>
 
     <section id="industry">
-      <h2>Industrial Positions</h2>
+      <h2>Internship Experience</h2>
       <div class="card list">
         <div>
-          <p class="item-title">Prompt Engineer Intern, MaaS Department · Z.AI (Jun – Aug 2025), Beijing</p>
+          <p class="item-title">Prompt Engineering Intern, MaaS Department — Zhipu AI</p>
+          <p class="item-meta">Jun 2025 – Aug 2025 · Beijing, China</p>
           <p class="item-meta">
-            Worked on the REDNOTE (Xiaohongshu's overseas version) AI Translation System team, focusing on multilingual prompt design,
-            retrieval-augmented generation (RAG) pipelines, and translation strategy development across cross-lingual domains.
+            Contributed to the <strong>REDNOTE</strong> AI translation system, focusing on
+            <strong>multilingual prompt design</strong>, <strong>RAG pipelines</strong>, evaluation, and translation strategy
+            design, with extensive work in <strong>Dify</strong>.
           </p>
           <p class="item-meta">
-            Designed and deployed Dify-based prompt-engineering workflows supporting instruction fine-tuning of multimodal LLMs
-            (GLM-4v/4.5v) for contract understanding from PDF/image inputs and structured JSON output generation.
-            Designed the PRD and MVP for an LLM prompt-sharing website and implemented workflows for prompt-to-HTML rendering,
-            multi-speaker podcast generation, and TTS stress testing for production readiness.
-          </p>
-        </div>
-        <div>
-          <p class="item-title">Data Science Intern · Real AI (May – Aug 2024), Beijing</p>
-          <p class="item-meta">
-            Processed large-scale unstructured web data using Python (pandas, NumPy) and SQL, including automated data-cleaning
-            pipelines for schema standardization, null-value imputation, and cross-table validation.
+            Designed and deployed multiple Dify workflows, including evaluation suites for in-house models and
+            instruction fine-tuning of multimodal LLMs (GLM-4v/4.5v); supported B2B use cases such as structured output
+            extraction from PDF/image contracts.
           </p>
           <p class="item-meta">
-            Helped design and deploy a multi-turn prompt-engineering and retrieval pipeline for an enterprise policy-advising LLM,
-            integrating natural-language understanding, semantic retrieval, and consistency checks to enhance factual reliability
-            and reduce hallucination.
+            Authored the PRD and built the MVP for an LLM prompt-sharing website; developed workflows for prompt-to-HTML
+            rendering, multi-speaker podcast generation, and TTS stress testing.
           </p>
         </div>
+
         <div>
-          <p class="item-title">Cybersecurity Intern, Security BU · QAX (Qi An Xin Group) (Aug – Oct 2024), Beijing</p>
+          <p class="item-title">Data Science Intern — RealAI</p>
+          <p class="item-meta">May 2024 – Aug 2024 · Beijing, China</p>
           <p class="item-meta">
-            Participated as a blue-team cybersecurity junior specialist in red-blue adversarial exercises, performing real-time threat
-            detection, vulnerability assessment, and network forensics using QAX’s defense platform.
+            Worked on <strong>“Jingce”</strong>, an AI policy-advising platform for government policy drafting and revision,
+            including compliance checks, historical policy search, policy suggestions, consistency checks, and rewriting.
           </p>
           <p class="item-meta">
-            Utilized Burp Suite, sqlmap, AWVS, and Kali Linux to identify injection, authentication, and configuration vulnerabilities;
-            authored technical reports and mitigation documentation for incident response.
+            Built large-scale pipelines to structure unstructured web data: crawling, cleaning, anomaly handling,
+            normalization, missing-value processing, and cross-table validation using <strong>Python</strong> and <strong>SQL</strong>.
+          </p>
+          <p class="item-meta">
+            Processed roughly <strong>100K</strong> semi-structured records with about <strong>50 attributes</strong> per record,
+            and ran prompt-engineering experiments to improve context retention and multi-turn dialogue quality.
+          </p>
+        </div>
+
+        <div>
+          <p class="item-title">Cybersecurity Intern, Security BU — Qi An Xin (QAX)</p>
+          <p class="item-meta">Aug 2024 – Oct 2024 · Beijing, China</p>
+          <p class="item-meta">
+            Participated in a large-scale red-blue cybersecurity exercise as part of a rotating blue-team monitoring and
+            response unit, defending the core assets of a large central state-owned mining group.
+          </p>
+          <p class="item-meta">
+            Monitored network and server traffic, triaged alerts, reported incidents, and supported operational response procedures.
+          </p>
+          <p class="item-meta">
+            Outside the exercise, used <strong>pandas</strong> to assist HR with operational data processing for QAX cybersecurity services.
           </p>
         </div>
       </div>
@@ -331,24 +381,21 @@
           <p class="item-title">Prof. Dongfang Zhao — Assistant Professor, University of Washington</p>
           <p class="item-meta">
             Email: <a href="mailto:dzhao@uw.edu">dzhao@uw.edu</a><br>
-            Principal Investigator of the HPDIC Lab and my primary research mentor. Worked together on three projects involving
-            high-performance data-intelligence systems.
+            Principal Investigator of the HPDIC Lab and my primary research mentor.
           </p>
         </div>
         <div>
-          <p class="item-title">Dr. Luanzheng (Lenny) Guo — Computer Scientist, Pacific Northwest National Laboratory</p>
+          <p class="item-title">Dr. Luanzheng Guo — Computer Scientist, Pacific Northwest National Laboratory</p>
           <p class="item-meta">
             Email: <a href="mailto:lenny.guo@pnnl.gov">lenny.guo@pnnl.gov</a><br>
-            Collaborator on power-consumption analysis for data centers and co-author of
-            <em>ProHD: Projection-Based Hausdorff Distance Approximation</em>.
+            Collaborator and co-author on <em>ProHD</em>.
           </p>
         </div>
         <div>
           <p class="item-title">Dr. Hadrian Quan — Postdoctoral Scholar, University of California, Santa Cruz</p>
           <p class="item-meta">
             Email: <a href="mailto:hquan1@ucsc.edu">hquan1@ucsc.edu</a><br>
-            Formerly at the University of Washington. Instructor for the year-long Accelerated Honors Advanced Calculus sequence
-            (Vector Calculus, Complex Analysis, PDEs) and WXML faculty mentor for a nine-month mathematics project on concentration of measure.
+            Formerly at UW; instructor for the honors advanced calculus sequence and WXML faculty mentor.
           </p>
         </div>
       </div>
@@ -357,44 +404,53 @@
     <section id="etc">
       <h2>Etc.</h2>
       <div class="card">
-        <p>I will add some of the interesting projects I have done and photos I have taken here soon :)</p>
+        <p>
+          I plan to add selected projects, slides, posters, and photography here soon.
+        </p>
       </div>
     </section>
 
     <footer>
-      &copy; <span id="year"></span> Jiuzhou Fu · Seattle, WA · <a href="mailto:jiuzhou@uw.edu">jiuzhou@uw.edu</a>
+      &copy; <span id="year"></span> Jiuzhou Fu · Seattle, WA ·
+      <a href="mailto:zhii200465@gmail.com">zhii200465@gmail.com</a>
     </footer>
   </main>
 
   <script>
     const root = document.documentElement, key = 'theme';
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
     function applyTheme(next){
       root.setAttribute('data-theme', next === 'dark' ? 'dark' : 'light');
       const pressed = next === 'dark';
       document.getElementById('theme-toggle').setAttribute('aria-pressed', pressed);
-      document.getElementById('toggle-icon').innerHTML = pressed ?
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>' :
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2"/></svg>';
+      document.getElementById('toggle-icon').innerHTML = pressed
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2"/></svg>';
       document.getElementById('toggle-text').textContent = pressed ? 'Dark' : 'Light';
     }
+
     function initTheme(){
       const saved = localStorage.getItem(key);
       return (saved === 'dark' || saved === 'light') ? saved : (prefersDark.matches ? 'dark' : 'light');
     }
+
     let current = initTheme();
     applyTheme(current);
+
     prefersDark.addEventListener('change', e => {
       if (!localStorage.getItem(key)) {
         current = e.matches ? 'dark' : 'light';
         applyTheme(current);
       }
     });
+
     document.getElementById('theme-toggle').addEventListener('click', () => {
       current = current === 'dark' ? 'light' : 'dark';
       localStorage.setItem(key, current);
       applyTheme(current);
     });
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
